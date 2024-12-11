@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <title>Insert Category</title>
+    <script src="js/category.js"></script>
+    <style>
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            color:#081F5C
+        }
+        body {
+            background-color: #FFF9F0;
+            text-align: center;
+        }
+        form {
+            font-size:x-large;
+            font-family:'Times New Roman', Times, serif;
+            font-weight:300;
+        }
+        label{
+            color:darkblue;
+        }
+        input{
+            width: 200px;
+            height: 25px;
+        }
+        input:focus{
+            background-color: #CBDCED;
+        }
+        button{
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            font-size:medium;
+            border: 2px solid #BAD6EB;
+            background-color: #BAD6EB;
+            opacity: 1;
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+        #home{
+            left:25px;
+        }
+        #insert{
+            right:630px;
+        }
+    </style>
+
+</head>
+<body>
+    <button id="home" type="button" onclick="goHome()">Home</button><br>
+    <h1>Category Form</h1>
+    <form>
+        <label for="name">Name of Category:</label>
+        <input type="text" name="category_name" id="category_name" required><br><br>
+
+        <button id='insert' type="button" onclick="insertCategory()" >Insert Category</button>
+    </form> 
+</body>
+</html>

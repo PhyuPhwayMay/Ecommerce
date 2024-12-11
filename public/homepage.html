@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <title>Home Page</title>
+    <script src="js/display_products.js"></script>
+    <style>
+        body{
+            background-color:#FFF9F0;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color:#081F5C
+        }
+        div p{
+            text-align:center;
+            font-family:'Martel', serif;
+            color:#38524C;
+        }
+        div h3{
+            text-align:center;
+            color:#738290;
+            font-weight:bold;
+            font-size: large;
+        }
+        button{
+            position: absolute;
+            top:150px;
+            width: 150px;
+            height: 30px;
+            border: 2px solid #BAD6EB;
+            background-color: #BAD6EB;
+            opacity: 1;
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+        #inserting{
+            right:10px;
+        }
+        #forcat{
+            right: 630px;
+        }
+    </style>
+
+</head>
+<body onload="loadBothProductCat()">
+    <h1>ABC</h1>
+    <h1>Product List</h1>
+    
+    <button type="button" id="inserting" onclick=goInsert() >Upload New Product</button><br>
+    <button type="button" id="forcat" onclick="showCategoryDetails()">Category Details</button>
+    
+    <div id="dynamicProductDataList">
+        <table><tr>
+            <td><h4>Product Name</h4><br></td>
+            <img src="" alt="product name" width="400" height="400"><br>
+            <p>ID:<br>
+            Description:<br>
+            Price:<br>
+            Category Array:<br></p></td>
+        </tr>
+        </table>
+    </div>
+</body>
+</html>

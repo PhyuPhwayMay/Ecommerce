@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <script src="js/update_products.js"></script>
+
+    <style>
+        h1{
+            color:#081F5C;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body {
+            background-color: #FFF9F0;
+            text-align: center;
+        }
+        form {
+            font-size:x-large;
+            font-family:'Times New Roman', Times, serif;
+            font-weight:300;
+        }
+        .fillform{
+            width: 200px;
+            height: 25px;
+        }
+        .fillform:focus{
+            background-color: #CBDCED;
+        }
+        textarea:focus{
+            background-color: #CBDCED;
+        }
+        select{
+            width: 200px;
+            height: 25px;
+        }
+        label{
+            color:darkblue;
+        }
+        button{
+            position: absolute;
+            width: 150px;
+            height: 30px;
+            font-size:medium;
+            border: 2px solid #BAD6EB;
+            background-color: #BAD6EB;
+            opacity: 1;
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+        #home{
+            left:25px;
+        }
+        #updating{
+            right:700px;
+        }
+        #deleteButton{
+            right:530px;
+        }
+    </style>
+
+</head>
+<body onload="finalSetOfProduct()">
+    <button id="home" type="button" onclick="home()">Home</button><br>
+    <h1>Edit Product</h1>
+
+    <form method="post">
+        <input type="text" id="id" name="id" hidden><br>
+
+        <label for="product_name">Product Name:</label>
+        <input class="fillform" type="text" name="product_name" id="product_name" required><br><br>
+
+        <label for="product_image">Product Image:</label>
+        <input class="fillform" type="text" name="product_image" id="product_image" required><br><br>
+
+        <label for="description">Description:<br>
+            <textarea name="description" id='description' rows="6" cols="50" required></textarea><br><br>
+        </label>
+
+        <label for="category">Category:</label>
+        <select class="fillform" name="category" id="category" required>
+            <option>--Select a Category--</option><br>
+        </select><br><br>
+
+        <label for="price">Price:</label>
+        <input class="fillform" type="text" name="price" id="price" required><br><br>
+
+        <button type="button" onclick="updateProductData()" id="updating">Update</button>
+        <button type="button" onclick="deleteProductData(this)" pId="" id="deleteButton">Delete</button>
+    </form>
+</body>
+</html>
